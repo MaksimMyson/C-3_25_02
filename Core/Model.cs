@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    internal class Model
+    public class Calculator
     {
+        public static int GetProductInRange(int start, int end)
+        {
+            int product = 1;
+            for (int i = start; i <= end; i++)
+            {
+                product *= i;
+            }
+            return product;
+        }
     }
 }
