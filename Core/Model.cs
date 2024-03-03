@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace Core
 {
-    internal class Model
+    public class ArrayFilter
     {
+        public static int[] FilterArray(int[] originalArray, int[] filterArray)
+        {
+            
+            List<int> resultList = new List<int>();
+
+           
+            foreach (int num in originalArray)
+            {
+                
+                if (!filterArray.Contains(num))
+                {
+                   
+                    resultList.Add(num);
+                }
+            }
+
+            return resultList.ToArray();
+        }
     }
 }
